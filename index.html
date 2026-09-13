@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="China sourcing agent, Shanghai warehousing and export operations through major Chinese ports, with a focus on machinery and industrial equipment.">
+  <title>China Sourcing & Export Operations | Machinery Export Support</title>
+  <style>
+    :root {
+      --ink: #10202b;
+      --ink-soft: #53616a;
+      --paper: #f4f0e8;
+      --paper-deep: #e8e1d5;
+      --orange: #e85d2a;
+      --orange-dark: #c9481c;
+      --navy: #0d2635;
+      --line: rgba(16, 32, 43, .16);
+      --white: #fffdf8;
+      --shadow: 0 24px 70px rgba(13, 38, 53, .12);
+      --display: "Arial Narrow", "Roboto Condensed", "Microsoft YaHei", sans-serif;
+      --body: "Noto Serif SC", "Songti SC", SimSun, serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(16,32,43,.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16,32,43,.026) 1px, transparent 1px),
+        var(--paper);
+      background-size: 32px 32px;
+      font-family: var(--body);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .22;
+      z-index: 20;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.09'/%3E%3C/svg%3E");
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    .wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      z-index: 10;
+    }
+    .brand { display: flex; align-items: center; gap: 13px; }
+    .brand-mark {
+      width: 40px; height: 40px;
+      border: 2px solid var(--ink);
+      display: grid; place-items: center;
+      transform: rotate(45deg);
+      position: relative;
+    }
+    .brand-mark::after { content: ""; width: 16px; height: 16px; background: var(--orange); }
+    .brand-text { font-family: var(--display); font-weight: 800; line-height: 1.1; letter-spacing: .04em; }
+    .brand-text small { display: block; color: var(--ink-soft); font-size: 10px; letter-spacing: .2em; margin-top: 5px; }
+    .nav-links { display: flex; align-items: center; gap: 30px; font-family: var(--display); font-size: 14px; font-weight: 700; }
+    .nav-links a { position: relative; }
+    .nav-links a:not(.nav-cta)::after { content: ""; position: absolute; left: 0; bottom: -5px; width: 0; height: 2px; background: var(--orange); transition: .25s; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { padding: 10px 18px; color: var(--white); background: var(--ink); transition: .25s; }
+    .nav-cta:hover { background: var(--orange); }
+
+    .hero { min-height: 710px; position: relative; display: grid; align-items: center; padding: 80px 0 96px; }
+    .hero::after {
+      content: "CN → GLOBAL";
+      position: absolute; right: -70px; top: 48%;
+      transform: rotate(90deg) translateY(-50%);
+      font: 700 11px/1 var(--display); letter-spacing: .35em; color: var(--ink-soft);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.17fr .83fr; gap: 72px; align-items: center; }
+    .eyebrow { display: flex; align-items: center; gap: 14px; color: var(--orange-dark); font: 800 12px/1 var(--display); letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 42px; height: 2px; background: currentColor; }
+    h1 { margin: 25px 0 26px; font-family: var(--display); font-size: clamp(54px, 7.2vw, 98px); line-height: .98; letter-spacing: -.055em; }
+    h1 span { display: block; color: transparent; -webkit-text-stroke: 1.5px var(--ink); }
+    .hero-copy { max-width: 650px; color: var(--ink-soft); font-size: 17px; }
+    .hero-actions { display: flex; align-items: center; gap: 22px; margin-top: 38px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 54px; padding: 0 24px; border: 1px solid var(--ink); font-family: var(--display); font-weight: 800; transition: .25s; cursor: pointer; }
+    .button.primary { background: var(--orange); color: #fff; border-color: var(--orange); box-shadow: 8px 8px 0 var(--ink); }
+    .button.primary:hover { transform: translate(4px,4px); box-shadow: 4px 4px 0 var(--ink); }
+    .button.text { border: 0; padding: 0; min-height: auto; border-bottom: 1px solid var(--ink); }
+    .button .arrow { font-size: 20px; transition: transform .25s; }
+    .button:hover .arrow { transform: translateX(4px); }
+
+    .hero-visual { height: 495px; position: relative; }
+    .machine-card { position: absolute; inset: 28px 0 28px 38px; background: var(--navy); overflow: hidden; box-shadow: var(--shadow); }
+    .machine-card::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 66% 30%, rgba(232,93,42,.25), transparent 24%),
+        linear-gradient(135deg, transparent 49.6%, rgba(255,255,255,.08) 50%, transparent 50.4%);
+    }
+    .machine-lines { position: absolute; inset: 55px; border: 1px solid rgba(255,255,255,.2); }
+    .machine-lines::before, .machine-lines::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.14); }
+    .machine-lines::before { width: 210px; height: 210px; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); box-shadow: 0 0 0 26px rgba(255,255,255,.035), 0 0 0 54px rgba(255,255,255,.025); }
+    .machine-lines::after { inset: 50% -35px auto; }
+    .gear {
+      position: absolute; width: 120px; height: 120px; border-radius: 50%; border: 24px dashed rgba(232,93,42,.8);
+      right: 72px; top: 110px; animation: spin 30s linear infinite;
+    }
+    .gear::after { content: ""; position: absolute; inset: 18px; background: var(--navy); border: 1px solid rgba(255,255,255,.3); border-radius: 50%; }
+    .visual-label { position: absolute; left: 32px; bottom: 28px; color: var(--white); font: 700 12px/1.7 var(--display); letter-spacing: .15em; }
+    .visual-label b { color: var(--orange); display: block; font-size: 30px; letter-spacing: 0; }
+    .visual-stamp { position: absolute; top: 0; right: -22px; width: 116px; height: 116px; background: var(--orange); color: white; display: grid; place-items: center; text-align: center; font: 800 13px/1.4 var(--display); transform: rotate(6deg); }
+    .visual-stamp strong { font-size: 34px; display: block; }
+    .port-tag { position: absolute; left: 0; top: 62px; background: var(--white); border: 1px solid var(--ink); padding: 16px 20px; font: 800 12px/1.4 var(--display); box-shadow: 6px 6px 0 var(--orange); }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .trust-strip { background: var(--ink); color: white; }
+    .trust-grid { display: grid; grid-template-columns: repeat(4,1fr); }
+    .trust-item { padding: 32px 26px; border-right: 1px solid rgba(255,255,255,.13); }
+    .trust-item:first-child { border-left: 1px solid rgba(255,255,255,.13); }
+    .trust-item b { display: block; color: var(--orange); font: 800 31px/1 var(--display); margin-bottom: 10px; }
+    .trust-item span { color: rgba(255,255,255,.68); font-size: 13px; }
+
+    section { padding: 118px 0; }
+    .section-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 60px; align-items: end; margin-bottom: 58px; }
+    .section-no { color: var(--orange); font: 800 12px/1 var(--display); letter-spacing: .15em; }
+    h2 { margin: 12px 0 0; font-family: var(--display); font-size: clamp(38px,5vw,64px); line-height: 1.05; letter-spacing: -.04em; }
+    .section-intro { color: var(--ink-soft); font-size: 16px; max-width: 570px; justify-self: end; margin: 0; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+    .service { position: relative; min-height: 390px; padding: 34px; border-right: 1px solid var(--line); overflow: hidden; transition: .35s; }
+    .service:first-child { border-left: 1px solid var(--line); }
+    .service:hover { background: var(--white); transform: translateY(-8px); box-shadow: var(--shadow); z-index: 2; }
+    .service-number { font: 800 12px/1 var(--display); color: var(--orange); }
+    .service-icon { width: 74px; height: 74px; margin: 45px 0 28px; color: var(--ink); }
+    .service h3 { font: 800 25px/1.2 var(--display); margin: 0 0 17px; }
+    .service p { color: var(--ink-soft); font-size: 14px; margin: 0; }
+    .service::after { content: "↗"; position: absolute; right: 28px; bottom: 24px; font: 300 28px/1 var(--display); opacity: .35; }
+
+    .experience { background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+    .experience::before { content: "10"; position: absolute; right: -35px; bottom: -155px; font: 800 520px/1 var(--display); color: rgba(255,255,255,.028); }
+    .experience-grid { display: grid; grid-template-columns: .84fr 1.16fr; gap: 110px; position: relative; }
+    .experience .eyebrow { color: var(--orange); }
+    .experience h2 { font-size: clamp(48px,6vw,78px); }
+    .experience h2 span { color: var(--orange); }
+    .experience-copy { color: rgba(255,255,255,.65); }
+    .check-list { display: grid; gap: 0; margin-top: 30px; border-top: 1px solid rgba(255,255,255,.15); }
+    .check { display: grid; grid-template-columns: 38px 1fr; gap: 8px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.15); font-size: 14px; color: rgba(255,255,255,.84); }
+    .check i { color: var(--orange); font-style: normal; }
+
+    .process-list { counter-reset: steps; border-top: 1px solid var(--ink); }
+    .step { counter-increment: steps; display: grid; grid-template-columns: 90px 1fr 1fr; gap: 34px; padding: 33px 8px; border-bottom: 1px solid var(--line); align-items: center; transition: .25s; }
+    .step:hover { padding-left: 20px; background: rgba(255,255,255,.5); }
+    .step::before { content: "0" counter(steps); font: 800 13px/1 var(--display); color: var(--orange); }
+    .step h3 { margin: 0; font: 800 24px/1.1 var(--display); }
+    .step p { color: var(--ink-soft); font-size: 14px; margin: 0; }
+
+    .ports { padding-top: 0; }
+    .port-panel { background: var(--paper-deep); display: grid; grid-template-columns: 1fr 1fr; min-height: 460px; }
+    .port-map { position: relative; min-height: 430px; overflow: hidden; background: var(--white); }
+    .port-map svg { width: 100%; height: 100%; position: absolute; inset: 0; }
+    .port-content { padding: 66px; display: flex; flex-direction: column; justify-content: center; }
+    .port-content h2 { font-size: 48px; }
+    .port-content p { color: var(--ink-soft); }
+    .port-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .port-pills span { border: 1px solid var(--ink); padding: 7px 12px; font: 800 12px/1 var(--display); background: rgba(255,255,255,.38); }
+
+    .contact { padding-top: 0; }
+    .contact-box { background: var(--orange); display: grid; grid-template-columns: .9fr 1.1fr; box-shadow: 16px 16px 0 var(--ink); }
+    .contact-copy { padding: 66px; color: white; }
+    .contact-copy h2 { font-size: 54px; margin-bottom: 22px; }
+    .contact-copy p { color: rgba(255,255,255,.82); }
+    .contact-details { margin-top: 38px; display: grid; gap: 13px; font: 700 13px/1.5 var(--display); }
+    .contact-details span { display: block; color: rgba(255,255,255,.65); font-size: 10px; letter-spacing: .14em; }
+    .contact-form { padding: 66px; background: var(--white); }
+    .field { margin-bottom: 20px; }
+    .field label { display: block; font: 800 11px/1 var(--display); letter-spacing: .1em; margin-bottom: 10px; }
+    .field input, .field textarea { width: 100%; border: 0; border-bottom: 1px solid var(--ink); background: transparent; padding: 10px 2px; outline: none; color: var(--ink); }
+    .field input:focus, .field textarea:focus { border-color: var(--orange); }
+    .field textarea { resize: vertical; min-height: 84px; }
+    .form-note { margin: 16px 0 0; font-size: 12px; color: var(--ink-soft); }
+    .form-status { min-height: 22px; margin-top: 12px; font-size: 13px; color: var(--orange-dark); }
+
+    footer { padding: 44px 0 26px; }
+    .footer-row { display: flex; justify-content: space-between; align-items: end; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+    .footer-note { color: var(--ink-soft); font-size: 12px; max-width: 460px; text-align: right; }
+    .copyright { display: flex; justify-content: space-between; color: var(--ink-soft); font: 700 10px/1 var(--display); letter-spacing: .08em; padding-top: 20px; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .hero .reveal { animation: rise .75s both; }
+    .hero .reveal:nth-child(2) { animation-delay: .08s; }
+    .hero .reveal:nth-child(3) { animation-delay: .16s; }
+    .hero .reveal:nth-child(4) { animation-delay: .24s; }
+    @keyframes rise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:none; } }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { padding-top: 58px; }
+      .hero-grid, .experience-grid, .contact-box { grid-template-columns: 1fr; }
+      .hero-grid { gap: 44px; }
+      .hero-visual { height: 400px; }
+      .experience-grid { gap: 50px; }
+      .section-head { grid-template-columns: 1fr; gap: 22px; }
+      .section-intro { justify-self: start; }
+      .port-panel { grid-template-columns: 1fr; }
+      .port-map { min-height: 340px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 30px, 1180px); }
+      .nav { height: 68px; }
+      .brand-text { font-size: 13px; }
+      .nav-cta { padding: 9px 12px; font-size: 12px; }
+      .hero { min-height: auto; padding: 60px 0 72px; }
+      .hero::after { display: none; }
+      h1 { font-size: clamp(50px, 17vw, 72px); }
+      .hero-copy { font-size: 15px; }
+      .hero-actions { align-items: flex-start; flex-direction: column; }
+      .hero-visual { height: 330px; }
+      .machine-card { inset: 15px 0 15px 18px; }
+      .machine-lines { inset: 38px; }
+      .gear { width: 88px; height: 88px; right: 42px; top: 90px; border-width: 18px; }
+      .visual-stamp { width: 88px; height: 88px; right: -5px; font-size: 10px; }
+      .visual-stamp strong { font-size: 26px; }
+      .port-tag { top: 45px; padding: 11px 14px; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .trust-item { padding: 24px 18px; border-bottom: 1px solid rgba(255,255,255,.13); }
+      section { padding: 82px 0; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service { min-height: 320px; border-left: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .service-icon { margin: 34px 0 20px; }
+      .step { grid-template-columns: 48px 1fr; gap: 12px; }
+      .step p { grid-column: 2; }
+      .port-content, .contact-copy, .contact-form { padding: 42px 28px; }
+      .port-content h2, .contact-copy h2 { font-size: 42px; }
+      .contact-box { box-shadow: 8px 8px 0 var(--ink); }
+      .footer-row, .copyright { align-items: flex-start; flex-direction: column; gap: 22px; }
+      .footer-note { text-align: left; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">EXPORT DESK<small>SOURCING · WAREHOUSING · EXPORT</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a><a href="#experience">Experience</a><a href="#process">Process</a><a href="#ports">Ports</a>
+        <a class="nav-cta" href="#contact">Send Inquiry</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow reveal">China sourcing & export operations</div>
+          <h1 class="reveal">Source in China.<span>Ship Worldwide.</span></h1>
+          <p class="hero-copy reveal">From supplier coordination and Shanghai warehousing to export operations through major Chinese ports. Backed by 10 years of machinery export experience, we provide practical, reliable support for overseas buyers and trading partners.</p>
+          <div class="hero-actions reveal">
+            <a class="button primary" href="#contact">Tell Us What You Need <span class="arrow">→</span></a>
+            <a class="button text" href="#services">Explore Our Services</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="machine-card">
+            <div class="machine-lines"></div><div class="gear"></div>
+            <div class="visual-label"><b>10 YEARS</b>MECHANICAL EXPORT EXPERIENCE</div>
+          </div>
+          <div class="port-tag">SHANGHAI<br>WAREHOUSE</div>
+          <div class="visual-stamp"><div><strong>ONE-STOP</strong>EXPORT SUPPORT</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="wrap trust-grid">
+        <div class="trust-item"><b>10 Years</b><span>Hands-on machinery export experience</span></div>
+        <div class="trust-item"><b>One-Stop</b><span>Sourcing, warehousing, documentation and shipping</span></div>
+        <div class="trust-item"><b>Shanghai</b><span>Storage, consolidation and dispatch support</span></div>
+        <div class="trust-item"><b>Multi-Port</b><span>Export routing based on cargo and sailing schedule</span></div>
+      </div>
+    </div>
+
+    <section id="services" class="wrap">
+      <div class="section-head reveal">
+        <div><span class="section-no">01 / SERVICES</span><h2>Complex Logistics.<br>Clear Execution.</h2></div>
+        <p class="section-intro">For overseas buyers and trading companies sourcing industrial products in China, consolidating cargo from multiple suppliers, or looking for dependable export execution support.</p>
+      </div>
+      <div class="services-grid reveal">
+        <article class="service">
+          <span class="service-number">SERVICE 01</span>
+          <svg class="service-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="34" cy="34" r="19"/><path d="M48 48l17 17M34 22v24M22 34h24"/><rect x="9" y="9" width="50" height="50"/></svg>
+          <h3>China Sourcing Agent</h3>
+          <p>Supplier communication, quotation and lead-time coordination, order follow-up, cargo consolidation and export document preparation—with practical knowledge of machinery and industrial products.</p>
+        </article>
+        <article class="service">
+          <span class="service-number">SERVICE 02</span>
+          <svg class="service-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10 29l30-17 30 17v39H10z"/><path d="M23 68V39h34v29M31 48h18M31 57h18"/></svg>
+          <h3>Shanghai Warehousing</h3>
+          <p>Receiving, short-term storage, cargo consolidation, package count and exterior condition checks, plus loading and port delivery coordination based on the shipping plan.</p>
+        </article>
+        <article class="service">
+          <span class="service-number">SERVICE 03</span>
+          <svg class="service-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 52h66L62 66H21zM18 52V25h38l9 27M27 25V13h20v12"/><path d="M8 70c7-5 13 5 20 0s13 5 20 0 13 5 20 0"/></svg>
+          <h3>Multi-Port Export Operations</h3>
+          <p>Booking, trucking, customs declaration, container loading and export documentation through Shanghai and other major Chinese ports, selected around cargo type, origin and sailing schedule.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="experience">
+      <div class="wrap experience-grid">
+        <div class="reveal"><div class="eyebrow">Mechanical equipment focus</div><h2>More Than Shipping.<br><span>We Understand Machinery.</span></h2></div>
+        <div class="experience-copy reveal">
+          <p>Machinery exports often involve non-standard packing, heavy or oversized cargo, split shipments of spare parts, wooden case and shipping mark requirements, and detailed product descriptions. Our role is to identify these issues before the cargo reaches the port.</p>
+          <div class="check-list">
+            <div class="check"><i>✓</i><span>Review packing and transport arrangements based on dimensions, weight and handling conditions</span></div>
+            <div class="check"><i>✓</i><span>Coordinate the consolidation and loading of main units, spare parts, tools and manuals</span></div>
+            <div class="check"><i>✓</i><span>Cross-check contracts, invoices, packing lists, customs data and transport documents</span></div>
+            <div class="check"><i>✓</i><span>Flag information that may affect customs declaration, shipment or destination clearance</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="wrap">
+      <div class="section-head reveal">
+        <div><span class="section-no">02 / WORKFLOW</span><h2>A Clear Outcome<br>at Every Step</h2></div>
+        <p class="section-intro">We first confirm the product, suppliers and trade terms, then prepare an execution plan. Costs, responsibilities and critical milestones are confirmed in writing.</p>
+      </div>
+      <div class="process-list reveal">
+        <div class="step"><h3>Requirement Review</h3><p>Confirm product, quantity, supplier location, destination, trade terms, target schedule and special requirements.</p></div>
+        <div class="step"><h3>Execution Plan</h3><p>Define the sourcing, consolidation, packing, export port and transport plan, including costs and responsibilities.</p></div>
+        <div class="step"><h3>Order Follow-Up</h3><p>Track production milestones, warehouse arrivals, documentation and exceptions that could affect the schedule.</p></div>
+        <div class="step"><h3>Export Operation</h3><p>Coordinate booking, loading, trucking, customs declaration and documents with traceable shipping updates.</p></div>
+        <div class="step"><h3>Document Handover</h3><p>Prepare and deliver the agreed export and transport documents, with support for clearance document checks.</p></div>
+      </div>
+    </section>
+
+    <section id="ports" class="ports wrap">
+      <div class="port-panel reveal">
+        <div class="port-map" aria-hidden="true">
+          <svg viewBox="0 0 600 430" fill="none">
+            <path d="M93 73C159 39 264 57 323 88c51 27 98 29 144 66 40 32 19 67 43 94 25 28 6 63-29 79-60 28-87 31-147 21-62-10-88 44-150 21-44-16-38-67-66-91-31-27-75-42-67-91 8-50-13-82 42-114Z" fill="#e8e1d5" stroke="#10202b" stroke-width="1.2"/>
+            <path d="M395 147c-5 42 27 56 24 94-3 34 29 52 56 72" stroke="#e85d2a" stroke-width="2" stroke-dasharray="5 8"/>
+            <g fill="#e85d2a" stroke="#fffdf8" stroke-width="4"><circle cx="416" cy="164" r="8"/><circle cx="426" cy="211" r="8"/><circle cx="443" cy="259" r="8"/><circle cx="469" cy="314" r="8"/></g>
+            <g font-family="Arial Narrow, sans-serif" font-size="12" font-weight="700" fill="#10202b"><text x="430" y="160">TIANJIN / QINGDAO</text><text x="442" y="207">SHANGHAI / NINGBO</text><text x="459" y="256">XIAMEN</text><text x="485" y="312">SHENZHEN / GUANGZHOU</text></g>
+            <path d="M415 164Q535 120 580 66M426 211Q545 205 590 179M443 259Q536 285 584 337" stroke="#10202b" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="port-content">
+          <span class="section-no">03 / PORT NETWORK</span>
+          <h2>The Right Port<br>for the Right Cargo.</h2>
+          <p>We coordinate export operations through major Chinese ports based on supplier location, cargo conditions and sailing schedules. Service scope, timing and cost are confirmed shipment by shipment.</p>
+          <div class="port-pills"><span>Shanghai</span><span>Ningbo</span><span>Qingdao</span><span>Tianjin</span><span>Shenzhen</span><span>Guangzhou</span><span>Xiamen</span><span>Other Ports on Request</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact wrap">
+      <div class="contact-box reveal">
+        <div class="contact-copy">
+          <span class="eyebrow">Start your inquiry</span>
+          <h2>What Do You Need<br>to Source from China?</h2>
+          <p>Send us the product name, quantity, supplier location, destination country and target schedule. We will review the practical handling options.</p>
+          <div class="contact-details">
+            <div><span>EMAIL</span><a href="mailto:steelychina.biz@gmail.com">steelychina.biz@gmail.com</a></div>
+            <div><span>WHATSAPP / TELEGRAM</span><a href="https://wa.me/8617317539519" target="_blank" rel="noopener">+86 173 1753 9519</a></div>
+            <div><span>LOCATION</span>Shanghai, China</div>
+          </div>
+        </div>
+        <form class="contact-form" id="inquiryForm">
+          <div class="field"><label for="name">NAME / COMPANY</label><input id="name" name="name" placeholder="Your name / company" required></div>
+          <div class="field"><label for="contactWay">EMAIL / WHATSAPP</label><input id="contactWay" name="contact" placeholder="Email or WhatsApp" required></div>
+          <div class="field"><label for="requirement">SOURCING OR EXPORT REQUIREMENT</label><textarea id="requirement" name="requirement" placeholder="Product, quantity, supplier location, destination..." required></textarea></div>
+          <button class="button primary" type="submit">Copy Inquiry Details <span class="arrow">→</span></button>
+          <p class="form-note">This is a static page. The button copies the inquiry details so they can be sent by email, WhatsApp or Telegram.</p>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-row">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">EXPORT DESK<small>SOURCING · WAREHOUSING · EXPORT</small></span></a>
+      <div class="footer-note">Service scope and cost are confirmed according to the product, port and handling requirements. HS classification, destination customs clearance and regulatory requirements must be verified using complete product information and the relevant authorities or qualified professionals.</div>
+    </div>
+    <div class="copyright"><span>© <span id="year"></span> EXPORT DESK. ALL RIGHTS RESERVED.</span><span>SHANGHAI · CHINA</span></div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('section:not(.hero) .reveal').forEach(el => observer.observe(el));
+
+    document.getElementById('inquiryForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const message = `Sourcing / Export Inquiry\nName / Company: ${data.get('name')}\nContact: ${data.get('contact')}\nRequirement: ${data.get('requirement')}`;
+      const status = document.getElementById('formStatus');
+      try {
+        await navigator.clipboard.writeText(message);
+        status.textContent = 'Inquiry details copied. Paste them into an email, WhatsApp or Telegram message.';
+      } catch (error) {
+        status.textContent = 'Copy failed. Please copy the information manually.';
+      }
+    });
+  </script>
+</body>
+</html>
